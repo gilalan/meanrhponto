@@ -1,0 +1,33 @@
+<div ng-controller="AuthenticationController">
+  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
+    <form name="userForm" ng-submit="signin(userForm.$valid)" class="signin" novalidate autocomplete="off">
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label for="username">Usuário</label>
+          <input type="text" id="username" name="username" class="form-control" ng-model="credentials.username" placeholder="digite seu nome de usuário" lowercase required>
+          <div ng-messages="userForm.username.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">O campo Usuário é de preenchimento obrigatório.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="digite sua senha" required>
+          <div ng-messages="userForm.password.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">O campo Senha é de preenchimento obrigatório.</p>
+          </div>
+        </div>
+        <div class="text-center form-group">
+          <button type="submit" class="btn btn-lg btn-primary">Entrar</button>
+          &nbsp; or&nbsp;
+          <a ui-sref="authentication.signup">Registrar</a>
+        </div>
+        <div class="text-center forgot-password">
+          <a ui-sref="password.forgot">Esqueci minha senha!</a>
+        </div>
+        <alert type="danger" ng-show="error" class="text-center text-danger">
+          <span ng-bind="error"></span>
+        </alert>
+      </fieldset>
+    </form>
+  </div>
+</div>

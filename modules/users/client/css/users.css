@@ -1,0 +1,72 @@
+@media (min-width: 992px) {
+  .nav-users {
+    position: fixed;
+  }
+}
+
+/**
+ * Font Montserrat
+ */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-regular-webfont.eot');
+  src: url('/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/montserrat-regular-webfont.woff') format('woff'), url('/fonts/montserrat-regular-webfont.ttf') format('truetype'), url('/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.social-account-container {
+  display: inline-block;
+  position: relative;
+}
+.btn-remove-account {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.user-profile-picture {
+  min-height: 150px;
+  max-height: 150px;
+}
+
+#banner {
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 15px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+}
